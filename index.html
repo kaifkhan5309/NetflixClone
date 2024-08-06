@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body class="bg-black text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-900 py-4 border-b border-gray-800">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <a href="#" class="text-3xl font-bold text-red-600">
+            <img src="netflx.png" alt="Netflix Logo" class="h-12"></a>
+            <nav>
+                <ul class="flex space-x-10">
+                    <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-400">TV Shows</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Movies</a></li>
+                    <li><a href="#" class="hover:text-gray-400">New & Popular</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Browse by Languages</a></li>
+                    <li><a href="#" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition duration-300">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero bg-cover bg-center text-center py-20" style="background-image: url('hero.jpg');">
+        <div class="overlay"></div>
+        <div class="hero-content relative z-10 container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4 leading-tight">Unlimited movies, TV shows, and more.</h1>
+            <p class="text-xl mb-8">Watch anywhere. Cancel anytime.</p>
+            <p class="text-xl mb-8">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form id="emailForm" class="flex max-w-lg mx-auto">
+                <input type="email" id="email" name="email" placeholder="Email address" required class="flex-grow p-3 rounded-l-md text-black focus:outline-none">
+                <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-r-md transition duration-300">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- TV Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center text-center px-4">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="tv.jpg" alt="TV Image" class="mx-auto rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4">Enjoy on your TV.</h2>
+                <p class="text-xl">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center text-center px-4">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="unlimited.470710fc-4dec-4479-8d36-a3e79acebd65" alt="Mobile Image" class="mx-auto rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4">Download your shows to watch offline.</h2>
+                <p class="text-xl">Save your favorites easily and always have something to watch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Watch Everywhere Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center text-center px-4">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="mobile.jpeg" alt="Devices Image" class="mx-auto rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4">Watch everywhere.</h2>
+                <p class="text-xl">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center text-center px-4">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="kids.png" alt="Kids Image" class="mx-auto rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4">Create profiles for kids.</h2>
+                <p class="text-xl">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-4xl font-bold mb-10">Frequently Asked Questions</h2>
+            <div id="faqAccordion">
+                <div class="faq-item mb-4">
+                    <div class="faq-header bg-gray-800 p-4 rounded-t-lg cursor-pointer">
+                        <h5 class="mb-0 text-xl text-white">What is Netflix?</h5>
+                    </div>
+                    <div class="faq-body bg-gray-800 p-4 rounded-b-lg">
+                        <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                    </div>
+                </div>
+                <div class="faq-item mb-4">
+                    <div class="faq-header bg-gray-800 p-4 rounded-t-lg cursor-pointer">
+                        <h5 class="mb-0 text-xl text-white">How much does Netflix cost?</h5>
+                    </div>
+                    <div class="faq-body bg-gray-800 p-4 rounded-b-lg">
+                        <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for a low monthly price. No extra fees or contracts.</p>
+                    </div>
+                </div>
+                <div class="faq-item mb-4">
+                    <div class="faq-header bg-gray-800 p-4 rounded-t-lg cursor-pointer">
+                        <h5 class="mb-0 text-xl text-white">Where can I watch?</h5>
+                    </div>
+                    <div class="faq-body bg-gray-800 p-4 rounded-b-lg">
+                        <p>Stream instantly from any internet-connected device, including smartphones, tablets, Smart TVs, and streaming devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-4 border-t border-gray-800">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">&copy; 2024 Netflix, Inc. All Rights Reserved.</p>
+            <ul class="flex justify-center space-x-6 mt-4">
+                <li><a href="#" class="text-gray-400 hover:text-white">Privacy</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Terms of Use</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Corporate Information</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
